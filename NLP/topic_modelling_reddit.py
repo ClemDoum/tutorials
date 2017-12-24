@@ -56,7 +56,7 @@ def clean_builder():
 clean = clean_builder()
 text_clean=[]
 for text in df['body']:
-    text_clean.append(clean(text).split)
+    text_clean.append(clean(text).split())
     
 dictionary = corpora.Dictionary(text_clean)
 text_term_matrix = [dictionary.doc2bow(text) for text in text_clean]
